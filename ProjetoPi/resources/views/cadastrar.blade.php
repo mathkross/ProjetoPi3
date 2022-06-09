@@ -1,11 +1,11 @@
 @extends('layout')
 @section("scriptjs")
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    $(function)(){
-        $("#cpf").mask("000.000.000-00")
-    }
+    $(function(){
+   $('#cpf').mask("000.000.000-00")
+    });
 </script>
 @endsection
 @section("conteudo")
@@ -19,22 +19,22 @@
         <div class="row">
         <div class="col-6">
             <div class="form-group">
-                Nome: <input type="text" name="nome" class="form-control">
+                Nome: <input type="text" name="nome" class="form-control" placeholder="Digite seu nome">
             </div>
         </div>
         <div class="col-6">
             <div class="form-group">
-                E-mail: <input type="email" name="email" class="form-control">
+                E-mail: <input type="email" name="email" class="form-control" placeholder="exemplo@gmail.com">
             </div>
         </div>
         <div class="col-6">
             <div class="form-group">
-                Cpf: <input type="text" name="cpf" id="cpf" class="form-control">
+                CPF: <input type="text" name="cpf" id="cpf" class="form-control" placeholder="000.000.000-00">
             </div>
         </div>
         <div class="col-6">
             <div class="form-group">
-                Senha: <input type="password" name="password" class="form-control">
+                Senha: <input type="password" name="password" class="form-control" placeholder="Digite sua senha">
             </div>
         </div>
         <div class="col-8">
@@ -49,7 +49,7 @@
             </div>
             <div class="col-3">
                 <div class="form-group">
-                    Complemento: <input type="text" name="complemento" class="form-control">
+                    Complemento: <input type="text" name="complemento" class="form-control" >
                 </div>
                 </div>
         <div class="col-4">
