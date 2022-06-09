@@ -10,7 +10,7 @@ class RModel extends Model
     use HasFactory;
 
     protected $primaryKey = "id";
-    public $timespatams = true; // quando criou e atualizou quando
+    public $timestamps = true; // quando criou e atualizou quando
     public $incremeting = true;
     protected $fillable = [];
 

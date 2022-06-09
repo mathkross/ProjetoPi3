@@ -8,5 +8,21 @@
 </head>
 <body>
  <h2>Categorias</h2>
+
+ @if(isset($listaCategorias) && count($listaCategorias) > 0)
+ <ul>
+    @foreach($listaCategorias as $cat)
+        <li>{{ $cat->categoria }}</li>
+    @endforeach
+ </ul>
+ @endif
+
+ @if(isset($lista) && count($lista) > 0)
+ <ul>
+     @foreach($lista as $prod)
+        <li>{{ $prod->nome }}</li>
+        @endforeach
+ </ul>
+ @endif
 </body>
 </html>
