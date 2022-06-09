@@ -23,17 +23,23 @@ class ClienteController extends Controller
         $usuario->fill($values);
         $usuario->login = $request->input("cpf", "");
 
+        $senha = $request->input("password", "");
+        $usuario->password = \Hash::make($senha);
+
         $endereco = new Endereco($values);
         $endereco->logradouro = $request->input("endereco", "");
 
 
         try{
+            \DB::beginTransaction();
             $usuario->save();
             $endereco->usuario_id = $usuario->id;
             $endereco->save();
+            \DB::commit();
         }catch(\Exception $e){
 
+            \DB::rollback();
         }
-        return redirect()->route("cadastrar");
+            return redirect()->route("cadastrar");
     }
 }
