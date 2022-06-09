@@ -29,7 +29,7 @@
         </div>
         <div class="col-6">
             <div class="form-group">
-                CPF: <input type="text" name="cpf" id="cpf" class="form-control" placeholder="000.000.000-00">
+                CPF: <input type="text" name="cpf" id="cpf" class="form-control" placeholder="000.000.000-00" maxlength="14">
             </div>
         </div>
         <div class="col-6">
